@@ -4,7 +4,8 @@ import pandas as pd
 from datetime import datetime
 
 # Setup configuration connecting to your live backend
-BACKEND_URL = "https://onrender.com"
+
+BACKEND_URL = "http://127.0.0"
 
 st.set_page_config(page_title="IrrigaSmart Dashboard", layout="wide")
 

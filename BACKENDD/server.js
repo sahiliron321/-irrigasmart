@@ -7,6 +7,12 @@ const PORT = 5000;
 
 // Enable cross-origin resource sharing and body parsing
 app.use(cors());
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
+
 app.use(express.json());
 
 // Hardcoded link to bypass all hidden whitespace and environment variables syntax glitches
